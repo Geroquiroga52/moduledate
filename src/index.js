@@ -2,7 +2,7 @@ function getTimeStamp () {
     return Date.now();
 }
 
-function getLongTime (locale = 'es-ES') {
+function getLongTime (locale = 'es-AR') {
     const options = {
         weekday: 'long',
         year: 'numeric',
@@ -13,7 +13,7 @@ function getLongTime (locale = 'es-ES') {
         second: 'numeric',
         timeZoneName: 'short'
     }
-    return new Date().toLocalStorage(locale, options);
+    return new Date().toLocaleString(locale, options);
 }
 
 module.exports = {
